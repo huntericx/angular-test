@@ -1,0 +1,65 @@
+<div class="container" *ngFor="let drink of drinks">
+    <h1 class="titcock mt-5 d-flex justify-content-center align-items-center">{{drink.strDrink}}</h1>
+    <div class="row mt-5">
+        <div class="col">
+            <img [src]="drink.strDrinkThumb" class="w-100 mt-7" [alt]="drink.strImageAttribution">
+            <a href="#" class="btn bg-tag" routerLink="/detail/drink">{{drink.strIBA}}</a>
+            <a href="#" class="btn bg-tag" routerLink="/detail/drink">IBA</a>
+        </div>
+        <div class="col">
+            <h1 class="ingredient">ingredient:</h1>
+            <div class="row">
+                <div class="col-4 container-fluid">
+                    <figure class="text-center mt-5 me-4">
+                        <img class="w-100" src="https://www.thecocktaildb.com/images/ingredients/{{drink.strIngredient1}}-Small.png" alt="">
+                        <figcaption class="caption ing">{{ drink.strMeasure1 }} {{drink.strIngredient1}}</figcaption>
+                    </figure>
+                </div>
+                <div class="col-4 container-fluid">
+                    <figure class="text-center mt-5 me-4">
+                        <img class="w-100" src="https://www.thecocktaildb.com/images/ingredients/{{drink.strIngredient2}}-Small.png" alt="">
+                        <figcaption class="caption ing">{{ drink.strMeasure2 }} {{drink.strIngredient2}}</figcaption>
+                    </figure>
+                </div>
+                <div class="col-4 container-fluid">
+                    <figure class="text-center mt-5 me-4">
+                        <img class="w-100" src="https://www.thecocktaildb.com/images/ingredients/{{drink.strIngredient3}}-Small.png" alt="">
+                        <figcaption class="caption ing">{{ drink.strMeasure3 }} {{drink.strIngredient3}}</figcaption>
+                    </figure>
+                </div>
+                <div class="col-4 container-fluid">
+                    <figure class="text-center mt-5 me-4">
+                        <img class="w-100" src="https://www.thecocktaildb.com/images/ingredients/{{drink.strIngredient4}}-Small.png" alt="">
+                        <figcaption class="caption ing">{{ drink.strMeasure4 }} {{drink.strIngredient4}}</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h3 class=" titcock mb-4 mt-5 d-flex justify-content-center align-items-center">istruzioni</h3>
+            <div class="d-flex justify-content-center align-items-center">
+                <button (click)="cambiaLingua('en')">
+                  <img src="https://img.icons8.com/color/48/great-britain.png" alt="Inglese">
+                </button>
+                <button (click)="cambiaLingua('de')">
+                  <img src="https://img.icons8.com/stickers/48/germany--v1.png" alt="Tedesco">
+                </button>
+                <button (click)="cambiaLingua('it')">
+                  <img src="https://img.icons8.com/color/48/italy.png" alt="Italiano">
+                </button>
+              </div>
+            <p class="mt-4 inst d-flex justify-content-center align-items-center" *ngIf="linguaSelezionata === 'en'">{{drink.strInstructions}}</p>
+            <p class="mt-4 inst d-flex justify-content-center align-items-center" *ngIf="linguaSelezionata === 'it'">{{drink.strInstructionsIT}}</p>
+            <p class="mt-4 inst d-flex justify-content-center align-items-center" *ngIf="linguaSelezionata === 'de'">{{drink.strInstructionsDE}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h4 class="ingredient mt-5 d-flex justify-content-center align-items-center">Glass</h4>
+            <p class="glass d-flex justify-content-center align-items-center">Serve: {{drink.strGlass}}</p>
+        </div>
+    </div>
+</div>
+

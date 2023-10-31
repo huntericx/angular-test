@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+.drinkh1{
+    font-family: 'Bebas Neue';
+    color: rgb(255, 136, 0);
+    font-size: 72px;
+}
+
+body{
+    background: #7700ff;
+}
+
+.bg-card{
+    background-color: rgb(255, 136, 0);
+}
+
+.bg-button{
+    background-color: #7700ff;
+}
+
+.bg-button:hover{
+    background-color: black;
+    color: #7700ff;
+}
+
+.ing{
+    font-size: 23px;
+    color: rgb(250, 250, 250);
+}
+
+.titcock{
+    font-family: 'Cinzel';
+    color: rgb(255, 136, 0);
+    font-size: 50px;
+}
+
+.ingredient{
+    font-family: 'Cinzel';
+    color: rgb(255, 136, 0);
+    font-size: 40px;
+}
+
+.iba{
+    font-family: 'Cinzel';
+    color: rgb(255, 136, 0);
+    font-size: 20px;
+}
+
+.inst{
+
+    font-size: 35px;
+    color: rgb(250, 250, 250);
+}
+
+.glass{
+    font-size: 35px;
+}
+
+.bg-tag{
+    background: black;
+    color: rgb(255, 136, 0);
+}
+.bg-tag:hover{
+    background: black;
+    color: rgb(255, 136, 0);
+}
+

@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="card mb-4 mx-2 mt-4 bg-card" *ngFor="let drink of drinks" style="width: 18rem;">
+      <img [src]="drink.strDrinkThumb" class="card-img-top mt-3" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{drink.strDrink}}</h5>
+        <a href="../detail/detail.component.html" class="btn bg-button" (click)="navigateToDetail(drink.idDrink)" routerLink="/detail/drink">Go somewhere</a>
+      </div>
+    </div>  
+  </div>  
+</div>
